@@ -406,8 +406,24 @@ header.contact .hover {
 }
 
 .text1 {
+	font-size: 28px;
+	line-height: 28px;
+}
+
+.text1-card {
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: bold;
+}
+
+.text2 {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.text3 {
 	font-size: 19px;
-	line-height: 19px;
+	line-height: 17px;
 }
 
 .box {
@@ -429,10 +445,8 @@ header.contact .hover {
 }
 
 .slogan {
-	margin-bottom: 117px;
+	margin-bottom: 60px;
 }
-
-
 
 .socials1 {
 	margin-top: 19px;
@@ -526,15 +540,16 @@ header.contact .hover {
 
 #contact {
 	padding-top: 230px;
-	padding-bottom: 190px;
+	padding-bottom: 50px;
 }
 
 #contact .slogan {
-	margin-bottom: 110px;
+	margin-bottom: 50px;
 }
 /****Map***/
 
 .map {
+	margin-top: 50px;
 	text-align: left;
 	overflow: hidden;
 	padding-top: 5px;
@@ -572,8 +587,8 @@ header.contact .hover {
 
 .map address {
 	overflow: hidden;
-	font-size: 14px;
-	line-height: 21px;
+	font-size: 24px;
+	line-height: 24px;
 }
 
 address dt {
