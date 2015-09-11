@@ -271,9 +271,21 @@ border-color: #334960 transparent transparent transparent;
 	padding-bottom: 191px;
 }
 
+li.top-link {
+	width: 100px;
+	float: right;
+	text-align: center;
+}
+
 header.home .top-link .hover{
 	width: 100px;
 	top: 0;
+}
+
+li.top-link1 {
+	width: 100px;
+	float: right;
+	text-align: center;
 }
 
 header.about .top-link1 .hover{
@@ -281,14 +293,32 @@ header.about .top-link1 .hover{
 	top: 0;
 }
 
+li.top-link2 {
+	width: 100px;
+	float: right;
+	text-align: center;
+}
+
 header.faq .top-link2 .hover{
 	width: 100px;
 	top: 0;
 }
 
+li.top-link3 {
+	width: 100px;
+	float: right;
+	text-align: center;
+}
+
 header.sponsors .top-link3 .hover{
 	width: 100px;
 	top: 0;
+}
+
+li.top-link4 {
+	width: 100px;
+	float: right;
+	text-align: center;
 }
 
 header.contact .top-link4 .hover{
