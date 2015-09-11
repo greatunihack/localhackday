@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="LocalHackDay 2015 is a programming event for students by students"/>
+		<meta name="author" content="LocalHackDay">
+		<title>LocalHackDay 2015</title>
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/form.css">
+		<style>
+		@font-face {
+			font-family: "Lato";
+			font-style: normal;
+			font-weight: 300;
+			src: local("Lato Light"), local("Lato-Light"), url("http://fonts.gstatic.com/s/lato/v11/EsvMC5un3kjyUhB9ZEPPwg.woff2") format("woff2");
+		}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.1.1.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/forms.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/tms-0.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.slider_wrapper')._TMS({
+					show: 0,
+					pauseOnHover: false,
+					prevBu: '.prev',
+					nextBu: '.next',
+					playBu: false,
+					duration: 800,
+					preset: 'fade',
+					pagination: true,
+					pagNums: false,
+					slideshow: 8000,
+					numStatus: false,
+					banners: 'fade',
+					waitBannerAnimation: false,
+					progressBar: false
+				});
+			});
+			
+			$(document).ready(function(){
+				!function(){
+					var map = []
+					,names = []
+					,win = $(window)
+					,header = $('header')
+					,currClass
+					$('.content').each(function(n){
+						map[n]=this.offsetTop
+						names[n]=$(this).attr('id')
+					})
+					win.on('scroll', function(){
+							var i = 0
+							while (map[i++] <= win.scrollTop());
+							if (currClass !== names[i-2])
+								currClass = names[i-2]
+							header.removeAttr("class").addClass(names[i-2])
+						})
+					}();
+			});
+			
+			function goToByScroll(id){
+				$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+			}
+			
+			$(document).ready(function(){
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+	</head>
+	<body class="">
+		<header class="home">
+			<div class="container_12">
+				<div class="grid_12">
+					<h1>
+						<a href="#" onClick="goToByScroll('home'); return false;">
+							<img src="images/logo.png" style="height: 100%;" alt="">
+						</a>
+					</h1>
+					<div class="menu_block">
+						<nav class="">
+							<ul class="sf-menu">
+								<li class="top-link4">
+									<a onClick="goToByScroll('contact'); return false;" href="#">Contact</a>
+									<strong class="hover"></strong>
+								</li>
+								<li class="top-link3">
+									<a onClick="goToByScroll('sponsors'); return false;" href="#">Sponsors</a>
+									<strong class="hover"></strong>
+								</li>
+								<li class="top-link2">
+									<a onClick="goToByScroll('faq'); return false;" href="#">FAQ</a>
+									<strong class="hover"></strong>
+								</li>
+								<li class="top-link1">
+									<a onClick="goToByScroll('about'); return false;" href="#">About</a>
+									<strong class="hover"></strong>
+								</li>
+								<li class="current top-link" style="width: 100px; text-align: center; float: right;">
+								<li class="current top-link" style="width: 100px; text-align: center; float: right;">
+									<a onClick="goToByScroll('home'); return false;" href="#" style="visibility: hidden;">Home</a>
+									<strong class="hover" style="visibility: hidden;"></strong>
+								</li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+		<div id="home" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slider_wrapper">
+						<ul class="items">
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>#LocalHackDay 2015</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>An amazing event</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>Here, in Manchester</h2>
+								</div>
+							</li>
+							<li>
+								<img src="images/spacer.gif" alt="">
+								<div class="caption banner">
+									<h2>Register now!</h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="socials">
+						<a href="#"></a>
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="about" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>About LocalHackDay</h3>
+						<div class="text1">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis erat mattis neque facilisis, sit amet ultricies
+						</div>
+					</div>
+				</div>
+				<h3>Our Team</h3>
+				<br>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img.jpg" alt="">
+						<div class="text1-card"><a href="#">Name Surname</a></div>
+						<span class="text2">position</span>
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img.jpg" alt="">
+						<div class="text1-card"><a href="#">Name Surname</a></div>
+						<span class="text2">position</span>
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img.jpg" alt="">
+						<div class="text1-card"><a href="#">Name Surname</a></div>
+						<span class="text2">position</span>
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight">
+						<img src="images/box_img.jpg" alt="">
+						<div class="text1-card"><a href="#">Name Surname</a></div>
+						<span class="text2">position</span>
+						<div class="socials1">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="faq" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>Frequently Asked Questions</h3>
+						<div class="text1">
+							Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus libero. Praesent faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequat. Curabitur vel lorem sit amet nulla ullamcorper fermentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</div>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img1.png" alt="">
+						<div class="text1-card"><a href="#">Title 1</a></div>
+						<span class="text2">Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus libero.</span>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img1.png" alt="">
+						<div class="text1-card"><a href="#">Title 2</a></div>
+						<span class="text2">Ite auctor non pellentesque vel, aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibhh sagittis ut.</span>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img1.png" alt="">
+						<div class="text1-card"><a href="#">Title 3</a></div>
+						<span class="text2">Praesent faucibusamus ater asmagna non nunc tristique rhoncus. Aliquam nib ante, tas id dictum aluctus libero.</span>
+					</div>
+				</div>
+				<div class="grid_3">
+					<div class="box maxheight1">
+						<img src="images/box1_img1.png" alt="">
+						<div class="text1-card"><a href="#">Title 4</a></div>
+						<span class="text2">Etiam dui eros na non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a commodo luctus libero.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sponsors" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<h3>Our Sponsors</h3>
+				</div>
+				<div class="companies">
+					<div class="grid_3">
+						<img src="images/company_logo.jpg" alt="">
+						<div class="text1-card">Company Name</div>
+						<span class="text2">Aliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesent.</span>
+						<br>
+						<a class="text3" href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/company_logo.jpg" alt="">
+						<div class="text1-card">Company Name</div>
+						<span class="text2">Fusce adipiscing quam id risus gittis, non consequat lacus interdumoin.</span>
+						<br>
+						<a class="text3" href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/company_logo.jpg" alt="">
+						<div class="text1-card">Company Name</div>
+						<span class="text2">Quisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus um.</span>
+						<br>
+						<a class="text3" href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/company_logo.jpg" alt="">
+						<div class="text1-card">Company Name</div>
+						<span class="text2">Courrewerwe abitur vel lorem sit amet ulla ullamcorper fermentumn vitae.</span>
+						<br>
+						<a class="text3" href="#">Go to Site</a>
+					</div>
+					<div class="clear"></div>
+					<div class="grid_3">
+						<img src="images/company_logo.jpg" alt="">
+						<div class="text1-card">Company Name</div>
+						<span class="text2">Oiliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesente.</span>
+						<br>
+						<a class="text3" href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/company_logo.jpg" alt="">
+						<div class="text1-card">Company Name</div>
+						<span class="text2">Gusce adipiscing quam id risus gittis, non consequat lacus interdumoiju.</span>
+						<br>
+						<a class="text3" href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/company_logo.jpg" alt="">
+						<div class="text1-card">Company Name</div>
+						<span class="text2">Niuisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus ol.</span>
+						<br>
+						<a class="text3" href="#">Go to Site</a>
+					</div>
+					<div class="grid_3">
+						<img src="images/company_logo.jpg" alt="">
+						<div class="text1-card">Company Name</div>
+						<span class="text2">Fouerourrewerwe abitur vel lorem sit amet ulla ullamcorper fermentum.</span>
+						<br>
+						<a class="text3" href="#">Go to Site</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact" class="content">
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="slogan">
+						<h3>Get in Touch</h3>
+						<div class="text1">
+							Gyrto ivamus at magna non nunc tristique rhoncusu. Lliquam nibh ante, egestas id dictum a, commodo luctus mibero. Praesent faucibus malesuada faucibu. Monec laoreet metus id laoreet malesuadw.
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4570.76001221001!2d-2.2340482566811106!3d53.46663256857344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1441946569439" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<div class="clear"></div>
+				<div class="map">
+					<div class="grid_5">
+						<div class="text1">Address</div>
+						<address>
+							<dl>
+								<dt>LocalHackDay<br>
+								Street,<br>
+								Manchester, Post Code.
+								</dt>
+								<dd><span>Freephone:</span></dd>
+								<dd><span>Telephone:</span></dd>
+								<dd><span>Fax:</span></dd>
+								<dd>E-mail: <a href="#" class="link-1"></a></dd>
+							</dl>
+						</address>
+					</div>
+					<div class="grid_5 prefix_1">
+						<div class="text1">Ask a Question</div>
+						<form id="form">
+							<div class="success_wrapper">
+								<div class="success">Contact form submitted!<br>
+									<strong>We will be in touch soon.</strong>
+								</div>
+							</div>
+							<fieldset>
+								<label class="name">
+								<input type="text" value="Name:">
+								<br class="clear">
+								<span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> </label>
+								<label class="email">
+								<input type="text" value="E-mail:">
+								<br class="clear">
+								<span class="error error-empty">*This is not a valid email address.</span><span class="empty error-empty">*This field is required.</span> </label>
+								<label class="message">
+								<textarea>Message:</textarea>
+								<br class="clear">
+								<span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
+								<div class="clear"></div>
+								<div class="btns">
+									<a data-type="submit" class="link1">Send</a>
+									<div class="clear"></div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="copy">
+						<a href="#" onClick="goToByScroll('home'); return false;">
+							<img src="images/logo.png" class="logo-set" alt="">
+						</a>
+						&copy; 2015 | <a href="#">Privacy Policy</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+	</body>
+</html>
