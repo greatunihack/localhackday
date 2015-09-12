@@ -617,6 +617,10 @@ header.location .hover {
 	margin-bottom: 16px;
 }
 
+#faq .clear {
+	height: 50px;
+}
+
 #speakers {
 	padding-top: 231px;
 	padding-bottom: 186px;
@@ -811,17 +815,17 @@ footer a:hover {
 
 .datagrid table thead th.time,
 .datagrid table tbody td.time {
-	width: 20%;
+	width: 15%;
 }
 
 .datagrid table thead th.title,
 .datagrid table tbody td.title {
-	width: 40%;
+	width: 55%;
 }
 
 .datagrid table thead th.speaker,
 .datagrid table tbody td.speaker {
-	width: 40%;
+	width: 30%;
 }
 
 .datagrid table tbody td {
