@@ -489,6 +489,14 @@ header.location .hover {
 .text1-card {
 	font-size: 28px;
 	line-height: 28px;
+	padding-bottom: 25px;
+	font-weight: bold;
+}
+
+.text1-card-narrow {
+	font-size: 28px;
+	line-height: 28px;
+	padding-bottom: 10px;
 	font-weight: bold;
 }
 
@@ -602,7 +610,7 @@ header.location .hover {
 
 #faq .box {
 	color: #ffffff;
-	background-color: #46dcc7;
+	background-color: #319a8b;
 	border-color: #99d6cb;
 	padding: 22px 15px 27px;
 }
