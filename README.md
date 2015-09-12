@@ -1,1 +1,1 @@
-# Local Hack Day @ Manchester
+# Local Hack Day Manchester
